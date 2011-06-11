@@ -1,17 +1,35 @@
 Install whiskey: https://github.com/cloudkick/whiskey
-npm install whiskey -g
+
+  npm install whiskey -g
 
 Install npm modules:
-npm install
+
+  npm install
 
 Run all tests:
-make OR make test
+
+  make OR make test
 
 Run specific test:
-make FILE=soft*
+
+  make FILE=soft*
 
 Run tests and output code coverage*:
-make coverage
+
+  make coverage
+
+To mark tests as done:
+
+  test.finish();
+
+To skip tests:
+
+  test.skip();
+
+You have access to sinon sandbox methods for mocking, spying, and stubbing:
+http://sinonjs.org/docs/#sandbox
+
+  EG: test.mock(..), test.spy(..), test.stub(..)
 
 * to get code coverage working please install node-jscoverage
 https://github.com/visionmedia/node-jscoverage
