@@ -20,7 +20,7 @@ it('properly uses the sandbox', function(test) {
 
   bagel.asyncFunc(function(err, result) {
     result.should.include.string('chubby');
-    test.finish();
+    test.skip();
   })
 });
 

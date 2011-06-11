@@ -3,12 +3,16 @@ var sinon = require('sinon');
 
 exports.it = function(exports) {
   return function(statement, callback) {
-    exports['test: ' + statement] = function(done) {
+    exports['test: ' + statement] = function(test) {
       var sandbox = sinon.sandbox.create();
+      sandbox.skip = function() {
+        sandbox.restore();
+        test.skip();
+      };
       sandbox.finish = function() {
         sandbox.restore();
-        done();
-      }
+        test.finish();
+      };
       callback(sandbox);
     }
   };
