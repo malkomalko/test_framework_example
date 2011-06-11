@@ -31,17 +31,20 @@ http://sinonjs.org/docs/#sandbox
 
   EG: test.mock(..), test.spy(..), test.stub(..)
 
+You also have access to various assert methods (including assert.response):
+https://github.com/cloudkick/whiskey/blob/master/lib/assert.js
+
+  EG: test.assert.response(..)
+  Note: test.assert.eql is currently undefined (whiskey bug)
+
 * to get code coverage working please install node-jscoverage
 https://github.com/visionmedia/node-jscoverage
 
 note: before tests are run, the makefile chdirs into the lib directory...
       this is what allows for:
 
-      var bagel = require('bagels/hard');
+        var bagel = require('bagels/hard');
 
       instead of having to do:
 
-      var bagel = require('../../lib/bagels/hard')
-
-      from your tests
-
+        var bagel = require('../../lib/bagels/hard')

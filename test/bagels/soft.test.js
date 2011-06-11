@@ -4,7 +4,7 @@ var it = testHelper.it(exports);
 var bagel = require('bagels/soft');
 
 it('passes the first test', function(test) {
-  (4).should.equal(1+3);
+  test.assert.equal(4, 1+3);
   test.finish();
 });
 
