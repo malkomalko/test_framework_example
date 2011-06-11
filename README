@@ -34,8 +34,8 @@ http://sinonjs.org/docs/#sandbox
 You also have access to various assert methods (including assert.response):
 https://github.com/cloudkick/whiskey/blob/master/lib/assert.js
 
-  EG: test.assert.response(..)
-  Note: test.assert.eql is currently undefined (whiskey bug)
+  EG: test.response(..), test.match(..), test.isDefined()...
+  Note: test.eql is currently undefined (removed in it function)
 
 * to get code coverage working please install node-jscoverage
 https://github.com/visionmedia/node-jscoverage
