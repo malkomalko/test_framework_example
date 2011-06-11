@@ -1,7 +1,7 @@
 var should = require('should');
-var sinon = exports.sinon = require('sinon');
+var sinon = require('sinon');
 
-var it = exports.it = function(exports) {
+exports.it = function(exports) {
   return function(statement, callback) {
     exports['test: ' + statement] = function(done) {
       var sandbox = sinon.sandbox.create();

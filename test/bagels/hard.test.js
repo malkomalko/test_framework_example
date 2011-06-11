@@ -1,6 +1,5 @@
 var testHelper = require('../test_helper');
 var it = testHelper.it(exports);
-var sinon = testHelper.sinon;
 
 var bagel = require('bagels/hard');
 

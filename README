@@ -1,6 +1,9 @@
 Install whiskey: https://github.com/cloudkick/whiskey
 npm install whiskey -g
 
+Install npm modules:
+npm install
+
 Run all tests:
 make OR make test
 
@@ -13,8 +16,14 @@ make coverage
 * to get code coverage working please install node-jscoverage
 https://github.com/visionmedia/node-jscoverage
 
-note: before tests are, the makefile chdirs into the lib directory...
+note: before tests are run, the makefile chdirs into the lib directory...
       this is what allows for:
+
       var bagel = require('bagels/hard');
 
-      instead of having to do require('../../lib/bagels/hard') from your tests
+      instead of having to do:
+
+      var bagel = require('../../lib/bagels/hard')
+
+      from your tests
+
